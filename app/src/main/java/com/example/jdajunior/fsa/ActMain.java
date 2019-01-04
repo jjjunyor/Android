@@ -1,6 +1,5 @@
 package com.example.jdajunior.fsa;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,7 +12,7 @@ public class ActMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_act_main);
+        setContentView(R.layout.act_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -21,14 +20,10 @@ public class ActMain extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it=new Intent(ActMain.this,ActCadCliente.class);
-                startActivity(it);
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
-    }
-    public void Cadastrar(View view){
-        Intent it=new Intent(ActMain.this,ActCadCliente.class);
-        startActivity(it);
     }
 
 }
